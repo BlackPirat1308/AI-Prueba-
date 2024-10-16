@@ -1,0 +1,35 @@
+<div class="dashboard-container">
+  <h1>SEO Manager Dashboard</h1>
+  
+  <section class="key-metrics">
+    <h2>Key Metrics</h2>
+    <div class="metrics-grid">
+      <div class="metric-card" *ngFor="let metric of keyMetrics">
+        <h3>{{ metric.name }}</h3>
+        <p class="metric-value">{{ metric.value }}</p>
+        <p class="metric-change" [ngClass]="{'positive': metric.change.startsWith('+'), 'negative': metric.change.startsWith('-')}">
+          {{ metric.change }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-actions">
+    <h2>Quick Actions</h2>
+    <button (click)="runSeoAudit()" class="action-button">Run SEO Audit</button>
+    <button (click)="generateReport()" class="action-button">Generate Report</button>
+    <a routerLink="/seo-analysis" class="action-button">Analyze Keywords</a>
+    <a routerLink="/ad-campaigns" class="action-button">Manage Campaigns</a>
+  </section>
+
+  <section class="recent-activities">
+    <h2>Recent Activities</h2>
+    <ul class="activity-list">
+      <li *ngFor="let activity of recentActivities" class="activity-item">
+        <span class="activity-date">{{ activity.date }}</span>
+        <span class="activity-action">{{ activity.action }}</span>
+        <span class="activity-details">{{ activity.details }}</span>
+      </li>
+    </ul>
+  </section>
+</div>

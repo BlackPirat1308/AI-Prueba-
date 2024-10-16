@@ -1,0 +1,34 @@
+<div class="app-container">
+  <header>
+    <nav>
+      <div class="logo">{{ title }}</div>
+      <ul>
+        <li><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a routerLink="/seo-analysis">SEO Analysis</a></li>
+        <li><a routerLink="/ad-campaigns">Ad Campaigns</a></li>
+        <li><a routerLink="/marketing-services">Marketing Services</a></li>
+        <li><a routerLink="/communication-hub">Communication Hub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <aside class="sidebar">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a routerLink="/seo-analysis">SEO Analysis</a></li>
+        <li><a routerLink="/ad-campaigns">Ad Campaigns</a></li>
+        <li><a routerLink="/marketing-services">Marketing Services</a></li>
+        <li><a routerLink="/communication-hub">Communication Hub</a></li>
+      </ul>
+    </aside>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 SEO Manager. All rights reserved.</p>
+  </footer>
+</div>
